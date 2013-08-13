@@ -4,6 +4,7 @@ git-help(1)
 NAME
 ----
 git-help - Display help information about Git
+git-help - 显示关于git的帮助信息
 
 SYNOPSIS
 --------
@@ -11,18 +12,21 @@ SYNOPSIS
 'git help' [-a|--all] [-g|--guide]
 	   [-i|--info|-m|--man|-w|--web] [COMMAND|GUIDE]
 
-DESCRIPTION
+DESCRIPTION(描述)
 -----------
 
 With no options and no COMMAND or GUIDE given, the synopsis of the 'git'
 command and a list of the most commonly used Git commands are printed
 on the standard output.
+不带任何选项而且没有给出命令或者引导，这个'git'命令和最常用的git命令列表将被打印在标准输出上。
 
 If the option '--all' or '-a' is given, all available commands are
 printed on the standard output.
+如果这个选项 '--all' 或者 '-a' 已经给出，所有有效的命令和打印将输出在标准输出上。
 
 If the option '--guide' or '-g' is given, a list of the useful
 Git guides is also printed on the standard output.
+如果这个选项 '--guide' 或者 '-g' 给出，。。。
 
 If a command, or a guide, is given, a manual page for that command or
 guide is brought up. The 'man' program is used by default for this
