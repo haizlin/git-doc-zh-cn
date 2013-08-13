@@ -4,6 +4,7 @@ git-init(1)
 NAME
 ----
 git-init - Create an empty Git repository or reinitialize an existing one
+git-init - 创建一个空的git仓库或者初始化一个已经存在的仓库
 
 
 SYNOPSIS
@@ -14,26 +15,35 @@ SYNOPSIS
 	  [--shared[=<permissions>]] [directory]
 
 
-DESCRIPTION
+DESCRIPTION(描述)
 -----------
 
 This command creates an empty Git repository - basically a `.git`
 directory with subdirectories for `objects`, `refs/heads`,
 `refs/tags`, and template files.  An initial `HEAD` file that
 references the HEAD of the master branch is also created.
+这个命令创建一个空的git仓库 - 基本上是一个'.git'目录和一些子目录，
+'objects', 'refs/heads', 'refs/tags', 和一些模板文件. 一个初始的主分支'HEAD'文件
+引用已经被创建
 
 If the `$GIT_DIR` environment variable is set then it specifies a path
 to use instead of `./.git` for the base of the repository.
+如果这个'$GIT_DIR'环境变量已经设置，那么它指定一个目录替换'./.git'这个最初的仓库
 
 If the object storage directory is specified via the
 `$GIT_OBJECT_DIRECTORY` environment variable then the sha1 directories
 are created underneath - otherwise the default `$GIT_DIR/objects`
 directory is used.
+如果这个对象存储目录已经被指定为'$GIT_OBJECT_DIRECTORY'环境变量，
+那么这些sha1目录将在这目录下创建，否则使用默认的'$GIT_DIR/objects'
 
 Running 'git init' in an existing repository is safe. It will not
 overwrite things that are already there. The primary reason for
 rerunning 'git init' is to pick up newly added templates (or to move
 the repository to another place if --separate-git-dir is given).
+在一个存在的仓库下运行'git init'是安全的。它不会覆盖任何已经存在的文件。
+这个主要原因是运行'git init'是提取新添加的模板（或者是移动这个仓库去别的地方，如果 --separate-git-dir 已经给出的话）
+
 
 OPTIONS
 -------
@@ -44,6 +54,8 @@ OPTIONS
 --quiet::
 
 Only print error and warning messages, all other output will be suppressed.
+仅仅是输出错误或者警告信息，所有的输出将被忽略（抑制）
+
 
 --bare::
 
