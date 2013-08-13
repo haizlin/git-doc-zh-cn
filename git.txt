@@ -4,6 +4,7 @@ git(1)
 NAME
 ----
 git - the stupid content tracker
+git - 愚蠢的内容追踪
 
 
 SYNOPSIS
